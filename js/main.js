@@ -52,3 +52,41 @@ window.addEventListener('scroll', function() {
     const header = document.querySelector('header');
     header.classList.toggle('scrolled', window.scrollY > 0);
 });
+
+
+// rotating-subtitle.js
+
+document.addEventListener('DOMContentLoaded', function () {
+    const titles = ["AI Engineer","Application Developer", "Innovator"];
+    let currentIndex = 0;
+    const subtitleElement = document.getElementById('rotating-subtitle');
+
+    function rotateTitle() {
+        currentIndex = (currentIndex + 1) % titles.length;
+        subtitleElement.textContent = titles[currentIndex];
+    }
+
+    setInterval(rotateTitle, 3000); // Change every 3 seconds
+});
+
+
+// Advanced GSAP Animations
+
+// Bouncing GitHub Icon
+gsap.from(".github-icon", { 
+    duration: 1, 
+    scale: 0.8, 
+    opacity: 0, 
+    ease: "bounce.out", 
+    yoyo: true, 
+    repeat: -1 
+});
+
+// Wobble Effect on LinkedIn Icon
+gsap.to(".linkedin-icon", {
+    duration: 1.5,
+    rotate: 10,
+    yoyo: true,
+    repeat: -1,
+    ease: "power1.inOut"
+});

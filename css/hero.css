@@ -1,7 +1,10 @@
-/* Updated Hero Section Styles with Dark Background */
-
+/* Universal Styles */
 body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
   font-size: 18px;
+  color: #fff;
+  background-color: #000;
 }
 
 .hero-about-section {
@@ -10,10 +13,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
-  padding: 0 20px;
+  padding: 20px;
   z-index: 1;
-  background: #000; /* Set the background to a dark color */
+  background: none; /* Interactive background */
+  overflow: hidden;
 }
 
 .overlay {
@@ -22,7 +25,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7); /* Slightly increase the opacity for a darker effect */
+  background: rgba(0, 0, 0, 0.6); /* Dark overlay to enhance readability */
   z-index: 0;
 }
 
@@ -34,6 +37,31 @@ body {
   width: 100%;
   position: relative;
   z-index: 1;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.text-content {
+  flex: 1;
+  text-align: left;
+}
+
+.animated-name {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.description-text {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #ccc; /* Slightly lighter than white to differentiate */
+  max-width: 600px;
 }
 
 .personal-photo-frame {
@@ -43,6 +71,7 @@ body {
   padding: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   order: 2;
+  margin-left: 20px;
 }
 
 .personal-photo {
@@ -52,62 +81,193 @@ body {
   border-radius: 5px;
 }
 
-/* Social Links Styling */
+/* Scroll Indicator */
+.scroll-indicator {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  animation: bounce 2s infinite;
+  z-index: 1;
+}
 
-.social-links {
-  margin-top: 20px;
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+      transform: translateX(-50%) translateY(0);
+  }
+  40% {
+      transform: translateX(-50%) translateY(-10px);
+  }
+  60% {
+      transform: translateX(-50%) translateY(-5px);
+  }
+}
+
+/* Responsive Layout for Tablets and Small Desktops */
+@media screen and (max-width: 768px) {
+  .content-wrapper {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .animated-name {
+      font-size: 2.5rem;
+  }
+
+  .subtitle {
+      font-size: 1.2rem;
+  }
+
+  .personal-photo-frame {
+      width: 250px;
+      height: 250px;
+      margin: 20px 0 0;
+  }
+
+  .text-content {
+      text-align: center;
+  }
+}
+
+/* Responsive Layout for Mobile Devices */
+@media screen and (max-width: 480px) {
+  .animated-name {
+      font-size: 2rem;
+  }
+
+  .subtitle {
+      font-size: 1rem;
+  }
+
+  .personal-photo-frame {
+      width: 200px;
+      height: 200px;
+  }
+}
+
+/* Fullscreen canvas container */
+#canvas-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Ensure it's behind the content */
+}
+
+/* Action Buttons Layout */
+.action-buttons {
   display: flex;
-  gap: 15px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 20px;
 }
 
-.social-links a {
-  color: #fff;
-  background-color: #333;
+/* Social Icons Layout */
+.social-icons {
+  display: flex;
+  justify-content: center; /* Center the icons */
+  gap: 20px;
+  width: 100%; /* Ensures the icons stay centered */
+}
+
+.icon-container {
+  display: inline-block;
+  position: relative;
+  perspective: 1000px; /* Necessary for 3D effect */
+}
+
+.social-icon {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.5s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.icon-container:hover .github-icon {
+  transform: rotateY(360deg) scale(1.1); /* Rotate and enlarge on hover */
+}
+
+.icon-container:hover .linkedin-icon {
+  transform: translateY(-10px) scale(1.1); /* Lift and scale effect */
+}
+
+/* Buttons Layout */
+.button-group {
+  display: flex;
+  gap: 20px;
+  justify-content: center; /* Center the buttons under the icons */
+  width: 100%; /* Ensures the buttons stay centered */
+}
+
+.action-button {
+  display: flex;
+  align-items: center;
   padding: 10px 20px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-  text-transform: uppercase;
+  border-radius: 25px;
+  font-size: 1.1rem;
   font-weight: bold;
+  text-decoration: none;
+  color: #ff6347;
+  border: 2px solid #ff6347;
+  transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+  background-color: transparent;
 }
 
-.social-links a:hover {
-  background-color: #ff6347;
+.action-button img {
+  margin-left: 10px;
+  width: 20px;
+  height: 20px;
 }
 
-.download-resume {
-  display: inline-block;
-  margin-top: 20px;
+.action-button:hover {
   background-color: #ff6347;
   color: #fff;
-  padding: 12px 24px;
-  border-radius: 5px;
-  font-weight: bold;
-  font-size: 1.2rem;
-  transition: background-color 0.3s ease;
-  text-transform: uppercase;
+  transform: translateY(-5px);
 }
 
-.download-resume:hover {
-  background-color: #e5533d;
-}
-
-.text-content {
-  max-width: 600px;
-  margin-right: 40px;
-  text-align: left;
-}
-
-.description {
-  margin-top: 10px;
-  font-size: 1rem;
-  line-height: 1.5;
+.contact-button {
+  border-color: #fff;
   color: #fff;
 }
 
-.typewriter {
-  display: inline-block;
-  border-right: 2px solid rgba(255, 255, 255, 0.75);
-  white-space: pre-wrap;
-  overflow: hidden;
-  animation: typing 4s steps(50, end), blink-caret 0.75s step-end infinite;
+.contact-button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  .social-icons {
+      gap: 15px;
+  }
+
+  .social-icon {
+      width: 40px;
+      height: 40px;
+  }
+
+  .action-button {
+      padding: 8px 16px;
+      font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .social-icons {
+      gap: 10px;
+  }
+
+  .social-icon {
+      width: 35px;
+      height: 35px;
+  }
+
+  .action-button {
+      padding: 7px 14px;
+      font-size: 0.9rem;
+  }
 }
