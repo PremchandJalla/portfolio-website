@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="css/navbar.css"> 
     <link rel="stylesheet" href="css/hero.css"> 
     <link rel="stylesheet" href="css/taxi.css">
+    <link rel="stylesheet" href="css/neural-network.css"> <!-- New CSS file -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -33,31 +34,27 @@
         </nav>
     </header>
 
- <!-- Hero Section -->
-<section id="hero-about" class="hero-about-section">
-    <div class="overlay"></div> <!-- Overlay for background fade effect -->
-    
-    <div class="content-wrapper">
-        <div class="text-content">
-            <h1 class="animated-name">Premchand Jalla</h1>
-            <p class="subtitle">AI Engineer | Creative Developer | Innovator</p>
-            <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac metus id lacus accumsan aliquam. Curabitur malesuada mauris a libero venenatis, sed tincidunt orci viverra.</p>
-            <div class="social-links">
-                <a href="https://github.com/PremchandJalla" target="_blank">GitHub</a>
-                <a href="https://www.linkedin.com/in/premchandjalla/" target="_blank">LinkedIn</a>
-                <a href="resume/PremchandJalla_Resume.pdf" class="download-resume" download>Download Resume</a>
+    <!-- Hero Section -->
+    <section id="hero-about" class="hero-about-section">
+        <div id="canvas-container"></div> <!-- Container for the neural network canvas -->
+        <div class="overlay"></div> <!-- Overlay for background fade effect -->
+        
+        <div class="content-wrapper">
+            <div class="text-content">
+                <h1 class="animated-name">Premchand Jalla</h1>
+                <p class="subtitle">AI Engineer | Creative Developer | Innovator</p>
+                <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac metus id lacus accumsan aliquam. Curabitur malesuada mauris a libero venenatis, sed tincidunt orci viverra.</p>
+                <div class="social-links">
+                    <a href="https://github.com/PremchandJalla" target="_blank">GitHub</a>
+                    <a href="https://www.linkedin.com/in/premchandjalla/" target="_blank">LinkedIn</a>
+                    <a href="resume/PremchandJalla_Resume.pdf" class="download-resume" download>Download Resume</a>
+                </div>
+            </div>
+            <div class="personal-photo-frame">
+                <img src="images/photo.jpg" alt="Premchand Jalla" class="personal-photo"> <!-- Your Photo -->
             </div>
         </div>
-        </div>
-        <div class="personal-photo-frame">
-            <img src="images/photo.jpg" alt="Premchand Jalla" class="personal-photo"> <!-- Your Photo -->
-        </div>
-    </div>
-</section>
-
-
-    
-    
+    </section>
 
     <!-- Featured Section  -->
     <section id="featured" class="featured-section">
@@ -141,7 +138,9 @@
         <p>&copy; 2024 Premchand Jalla. All rights reserved.</p>
     </footer>
 
-    <!-- JavaScript File -->
+    <!-- JavaScript Files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/neural-network.js"></script> <!-- New JS file -->
     <script src="js/main.js"></script>
 </body>
 </html>
