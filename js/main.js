@@ -90,3 +90,37 @@ gsap.to(".linkedin-icon", {
     repeat: -1,
     ease: "power1.inOut"
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const swiper = new Swiper('.swiper-container', {
+        slidesPerView: 1, // Start with one slide per view
+        spaceBetween: 30,
+        loop: true, // Enable looping of slides
+        autoplay: {
+            delay: 3000, // Set autoplay delay (in milliseconds)
+            disableOnInteraction: false, // Keep autoplay running after user interaction
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            640: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            },
+            1024: {
+                slidesPerView: 4,
+                spaceBetween: 40,
+            },
+        },
+    });
+});

@@ -5,26 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Premchand Jalla - Portfolio</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/about.css">
-    <link rel="stylesheet" href="css/featured.css"> 
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/featured.css">
     <link rel="stylesheet" href="css/skills.css">
     <link rel="stylesheet" href="css/projects.css">
     <link rel="stylesheet" href="css/certifications.css">
     <link rel="stylesheet" href="css/contact.css">
-    <link rel="stylesheet" href="css/navbar.css"> 
-    <link rel="stylesheet" href="css/hero.css"> 
-    <link rel="stylesheet" href="css/taxi.css">
-    <link rel="stylesheet" href="css/neural-network.css"> <!-- New CSS file -->
+    <link rel="stylesheet" href="css/neural-network.css"> <!-- Neural network specific CSS -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <!-- Navbar -->
     <header id="header">
         <nav>
             <ul class="nav-list">
                 <li><a href="#hero-about">Home</a></li>
-                <li><a href="#featured">Featured</a></li> 
+                <li><a href="#featured">Featured</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#certifications">Certifications</a></li>
@@ -38,7 +36,6 @@
     <section id="hero-about" class="hero-about-section">
         <div id="canvas-container"></div> <!-- Container for the neural network canvas -->
         <div class="overlay"></div> <!-- Overlay for background fade effect -->
-        
         <div class="content-wrapper">
             <div class="text-content">
                 <h1 class="animated-name">Premchand Jalla</h1>
@@ -47,14 +44,14 @@
                 <div class="action-buttons">
                     <div class="social-icons">
                         <a href="https://github.com/PremchandJalla" target="_blank" class="icon-container">
-                            <img src="images/Github.png" alt="GitHub" class="social-icon github-icon">
+                            <img src="images/Github.png" alt="GitHub" class="social-icon linkedin-icon">
                         </a>
                         <a href="https://www.linkedin.com/in/premchandjalla/" target="_blank" class="icon-container">
                             <img src="images/LinkedIN.png" alt="LinkedIn" class="social-icon linkedin-icon">
                         </a>
                     </div>
                     <div class="button-group">
-                        <a href="resume/PremchandJalla_Resume.pdf" class="action-button contact-button" download>
+                        <a href="resume/PremchandJalla_Resume.pdf" class="action-button resume-button" download>
                             <span>Resume</span> 
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="24" height="24">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v12m0 0l-3.5-3.5M12 16l3.5-3.5M5 20h14" stroke="#ff6347"/>
@@ -65,30 +62,71 @@
                         </a>
                     </div>
                 </div>
-                
-                
             </div>
             <div class="personal-photo-frame">
                 <img src="images/photo.jpg" alt="Premchand Jalla" class="personal-photo"> <!-- Your Photo -->
             </div>
         </div>
-        
         <div class="scroll-indicator">
             <span>&darr;</span>
         </div>
     </section>
-    
-    
-    
-    <!-- Featured Section  -->
-    <section id="featured" class="featured-section">
-        <div class="container">
-            <h2>Featured</h2>
-            <div class="featured-grid">
-                <!-- Featured content goes here -->
+
+ <!-- Featured Section -->
+<section id="featured" class="featured-section">
+    <div class="container">
+        <h2>Featured</h2>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <!-- Featured items go here -->
+                <!-- Example of a featured item -->
+                <div class="swiper-slide">
+                    <div class="featured-item">
+                        <img src="images/featured1.jpg" alt="Featured 1" class="featured-image">
+                        <p class="featured-description">Brief description of the featured item 1.</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="featured-item">
+                        <img src="images/featured1.jpg" alt="Featured 1" class="featured-image">
+                        <p class="featured-description">Brief description of the featured item 1.</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="featured-item">
+                        <img src="images/featured1.jpg" alt="Featured 1" class="featured-image">
+                        <p class="featured-description">Brief description of the featured item 1.</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="featured-item">
+                        <img src="images/featured1.jpg" alt="Featured 1" class="featured-image">
+                        <p class="featured-description">Brief description of the featured item 1.</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="featured-item">
+                        <img src="images/featured1.jpg" alt="Featured 1" class="featured-image">
+                        <p class="featured-description">Brief description of the featured item 1.</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="featured-item">
+                        <img src="images/featured1.jpg" alt="Featured 1" class="featured-image">
+                        <p class="featured-description">Brief description of the featured item 1.</p>
+                    </div>
+                </div>
+                
+                <!-- Additional swiper slides -->
             </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Navigation -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Skills Section -->
     <section id="skills" class="skills-section">
@@ -164,13 +202,43 @@
 
     <!-- JavaScript Files -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="js/neural-network.js"></script> <!-- New JS file -->
-    <script src="js/main.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/swiper.js"></script> <!-- Swiper JS -->
+    <script src="js/main.js"></script> <!-- Main JS -->
+    <script src="js/neural-network.js"></script> <!-- Neural network JS -->
 
+    <!-- Initialize Swiper -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const swiper = new Swiper('.swiper-container', {
+                slidesPerView: 1,
+                spaceBetween: 30,
+                loop: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                breakpoints: {
+                    640: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                    },
+                    768: {
+                        slidesPerView: 3,
+                        spaceBetween: 30,
+                    },
+                    1024: {
+                        slidesPerView: 4,
+                        spaceBetween: 40,
+                    },
+                },
+            });
+        });
+    </script>
 
-    </body>
-    </html>
 </body>
 </html>
-
-
