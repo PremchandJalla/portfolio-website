@@ -1,0 +1,83 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: #1a1a1a;
+  overflow-x: hidden;
+}
+
+#root {
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Fixed navbar styles */
+.navbar {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999 !important; /* Ensure navbar stays on top */
+  width: 100%;
+}
+
+/* Main content wrapper */
+.App {
+  position: relative;
+  min-height: 100vh;
+  padding-top: 70px; /* Height of navbar */
+}
+
+.main-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Fixed chatbot styles */
+.chatbot {
+  position: fixed !important;
+  bottom: 30px !important;
+  right: 30px !important;
+  z-index: 9998 !important; /* High z-index but below navbar */
+}
+
+/* Section styles */
+section {
+  position: relative;
+  min-height: 100vh;
+  padding: 20px;
+  scroll-margin-top: 70px; /* Account for fixed navbar when scrolling to sections */
+}
+
+/* Add smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Ensure proper stacking context */
+.hero-section,
+.features-section,
+.skills-section,
+.blogs-section,
+.contact-section {
+  position: relative;
+  z-index: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .App {
+    padding-top: 60px; /* Smaller padding for mobile */
+  }
+  
+  section {
+    scroll-margin-top: 60px;
+  }
+}

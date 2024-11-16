@@ -1,0 +1,593 @@
+/* Add DevIcon font */
+@import url('https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css');
+
+.skills {
+  min-height: 100vh;
+  background-color: #000;
+  color: white;
+  padding: 4rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('../../assets/mandelbroth.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background Formulas */
+.background-formulas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.formula {
+  position: absolute;
+  color: #007bff;
+  font-family: 'Courier New', monospace;
+  font-size: 1.4rem;
+  opacity: 0;
+  animation: formulaFloat 8s ease-in-out infinite;
+  text-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+  white-space: nowrap;
+}
+
+@keyframes formulaFloat {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  20% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: white;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.prompt {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 3rem;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  animation: pulse 2s infinite;
+  transition: opacity 0.3s ease;
+}
+
+.prompt.fade-out {
+  opacity: 0;
+}
+
+.categories-container {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+  transition: all 0.5s ease;
+}
+
+.category {
+  position: relative;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  padding: 2rem;
+  border-radius: 15px;
+  background: rgba(20, 20, 20, 0.8);
+  backdrop-filter: blur(10px);
+  width: 250px;
+}
+
+.category:hover {
+  transform: translateY(-10px);
+}
+
+.category.inactive {
+  opacity: 0;
+  transform: scale(0.8);
+  pointer-events: none;
+}
+
+.category.active {
+  transform: translateY(-10px) scale(1.1);
+}
+
+.category.active .icon-wrapper {
+  background: var(--hover-color);
+  box-shadow: 0 0 30px var(--hover-color);
+}
+
+.icon-wrapper {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #333;
+  transition: all 0.3s ease;
+}
+
+.icon-wrapper i {
+  font-size: 2rem;
+  color: white;
+}
+
+.category h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.skills-list {
+  margin-top: 2rem;
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.skill-item {
+  padding: 0.8rem;
+  margin: 0.5rem 0;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  animation: slideIn 0.3s ease forwards;
+  opacity: 0;
+  transform: translateY(10px);
+  border: 1px solid var(--skill-color);
+}
+
+.back-button {
+  margin-top: 2rem;
+  padding: 0.8rem 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 2rem auto 0;
+}
+
+.back-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+
+@media (max-width: 768px) {
+  .categories-container {
+    gap: 2rem;
+  }
+
+  .category {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .formula {
+    font-size: 1rem;
+  }
+}
+
+.active-category-view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  animation: fadeIn 0.5s ease;
+}
+
+.main-skill {
+  text-align: center;
+  animation: scaleIn 0.5s ease;
+}
+
+.main-skill-icon {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--category-color);
+  box-shadow: 0 0 30px var(--category-color);
+  animation: pulse 2s infinite;
+}
+
+.main-skill-icon i {
+  font-size: 3rem;
+  color: white;
+}
+
+.main-skill h3 {
+  font-size: 2rem;
+  color: var(--category-color);
+  margin-top: 1rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 800px;
+  margin: 2rem auto;
+}
+
+.skill-icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: rgba(20, 20, 20, 0.8);
+  border-radius: 10px;
+  border: 1px solid var(--skill-color);
+  transition: all 0.3s ease;
+  animation: fadeIn 0.5s ease backwards;
+}
+
+.skill-icon-container i {
+  font-size: 2.5rem;
+  color: var(--skill-color);
+  transition: transform 0.3s ease;
+}
+
+.skill-icon-container:hover i {
+  transform: scale(1.2);
+}
+
+.skill-icon-container img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.skill-icon-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.skill-icon-container:hover img {
+  transform: scale(1.1);
+}
+
+.skill-icon-container span {
+  font-size: 0.9rem;
+  color: white;
+  text-align: center;
+}
+
+.back-button {
+  margin-top: 2rem;
+  padding: 0.8rem 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 30px var(--category-color);
+  }
+  50% {
+    box-shadow: 0 0 50px var(--category-color);
+  }
+  100% {
+    box-shadow: 0 0 30px var(--category-color);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+
+  .main-skill-icon {
+    width: 100px;
+    height: 100px;
+  }
+
+  .main-skill h3 {
+    font-size: 1.5rem;
+  }
+
+  .detailed-skill-item {
+    padding: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .detailed-skill-item {
+    text-align: left;
+  }
+}
+
+/* Base mobile styles */
+@media screen and (max-width: 768px) {
+  .skills {
+    padding: 2rem 1rem;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  .mobile-container {
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  .mobile-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .mobile-prompt {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .mobile-categories {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .mobile-category {
+    width: 100%;
+    max-width: 280px;
+    padding: 1.5rem;
+  }
+
+  .mobile-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .mobile-category-title {
+    font-size: 1.1rem;
+  }
+
+  .mobile-active-view {
+    padding: 1rem 0;
+  }
+
+  .mobile-main-skill {
+    margin-bottom: 2rem;
+  }
+
+  .mobile-main-icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .mobile-main-icon i {
+    font-size: 2rem;
+  }
+
+  .mobile-skill-title {
+    font-size: 1.5rem;
+  }
+
+  .mobile-skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 0 0.5rem;
+  }
+
+  .mobile-skill-icon {
+    padding: 1rem;
+  }
+
+  .mobile-skill-icon i {
+    font-size: 1.8rem;
+  }
+
+  .mobile-skill-icon span {
+    font-size: 0.8rem;
+  }
+
+  .mobile-back-button {
+    padding: 0.8rem 1.5rem;
+    margin-top: 1.5rem;
+    width: 100%;
+    max-width: 280px;
+  }
+
+  /* Hide or adjust background formulas for mobile */
+  .mobile-hidden {
+    display: none;
+  }
+}
+
+/* Small mobile devices */
+@media screen and (max-width: 380px) {
+  .mobile-skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mobile-category {
+    max-width: 240px;
+  }
+
+  .mobile-title {
+    font-size: 1.8rem;
+  }
+
+  .mobile-skill-icon {
+    padding: 0.8rem;
+  }
+}
+
+/* Landscape mode */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  .skills {
+    padding: 1rem;
+  }
+
+  .mobile-categories {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .mobile-category {
+    width: calc(50% - 1rem);
+    max-width: none;
+  }
+
+  .mobile-skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .mobile-main-skill {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Add smooth scrolling for iOS */
+@supports (-webkit-touch-callout: none) {
+  .skills {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Improve touch targets */
+.mobile-category,
+.mobile-skill-icon,
+.mobile-back-button {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+/* Add loading states for better UX */
+.mobile-skill-icon.loading {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+/* Add active states for better feedback */
+.mobile-category:active,
+.mobile-skill-icon:active,
+.mobile-back-button:active {
+  transform: scale(0.98);
+}
+
+/* Optimize animations for mobile */
+@media (prefers-reduced-motion: reduce) {
+  .mobile-skill-icon,
+  .mobile-category,
+  .formula {
+    animation: none;
+    transition: none;
+  }
+}
+
+/* Fix iOS Safari issues */
+.mobile-skills-grid {
+  -webkit-overflow-scrolling: touch;
+  overflow-y: auto;
+  max-height: 70vh;
+}
+
+/* Add safe area insets for notched devices */
+@supports (padding: max(0px)) {
+  .mobile-container {
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
+    padding-bottom: max(1rem, env(safe-area-inset-bottom));
+  }
+} 

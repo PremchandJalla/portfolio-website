@@ -1,0 +1,213 @@
+.features-section {
+  position: relative;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 80px 20px;
+  color: white;
+  overflow: hidden;
+  filter: brightness(1.4) contrast(1.1);
+}
+
+.features-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  mix-blend-mode: screen;
+  opacity: 0.95;
+}
+
+.features-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 50%, 
+    rgba(0, 123, 255, 0.25) 0%, 
+    transparent 70%);
+  animation: backgroundGlow 4s infinite ease-in-out;
+  z-index: 1;
+}
+
+.section-title {
+  position: relative;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 50px;
+  color: white;
+  z-index: 2;
+  text-shadow: 
+    2px 2px 4px rgba(0, 0, 0, 0.3),
+    0 0 20px rgba(0, 123, 255, 0.5);
+}
+
+.features-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  z-index: 2;
+}
+
+.feature-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 123, 255, 0.2);
+  box-shadow: 
+    0 4px 15px rgba(0, 0, 0, 0.2),
+    0 0 20px rgba(0, 123, 255, 0.1),
+    inset 0 0 20px rgba(0, 123, 255, 0.05);
+  animation: cardPulse 3s infinite ease-in-out;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 
+    0 8px 25px rgba(0, 0, 0, 0.3),
+    0 0 30px rgba(0, 123, 255, 0.2),
+    inset 0 0 30px rgba(0, 123, 255, 0.1);
+  border-color: rgba(0, 123, 255, 0.4);
+}
+
+.feature-image {
+  width: 100%;
+  height: 200px;
+  background: rgba(0, 123, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-image-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 50%, 
+    rgba(0, 123, 255, 0.2) 0%, 
+    transparent 70%);
+  animation: imageGlow 3s infinite ease-in-out;
+}
+
+.feature-content {
+  padding: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.feature-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: white;
+  text-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+.feature-tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.feature-tech-stack span {
+  background: rgba(0, 123, 255, 0.2);
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  color: white;
+  border: 1px solid rgba(0, 123, 255, 0.3);
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.feature-tech-stack span:hover {
+  background: rgba(0, 123, 255, 0.3);
+  box-shadow: 0 0 15px rgba(0, 123, 255, 0.3);
+}
+
+.feature-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.feature-link {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  text-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+}
+
+.feature-link:hover {
+  color: #007bff;
+  text-shadow: 0 0 15px rgba(0, 123, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+@keyframes cardPulse {
+  0%, 100% {
+    box-shadow: 
+      0 4px 15px rgba(0, 0, 0, 0.2),
+      0 0 20px rgba(0, 123, 255, 0.1);
+  }
+  50% {
+    box-shadow: 
+      0 4px 20px rgba(0, 0, 0, 0.3),
+      0 0 30px rgba(0, 123, 255, 0.2);
+  }
+}
+
+@keyframes backgroundGlow {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 0.8; }
+}
+
+@keyframes imageGlow {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.5; }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .features-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .feature-content h3 {
+    font-size: 1.3rem;
+  }
+} 

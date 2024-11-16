@@ -1,0 +1,9 @@
+mkdir src/components
+mkdir src/components/Navbar
+mkdir src/components/Hero
+mkdir src/components/Features
+mkdir src/components/Skills
+mkdir src/components/Blogs
+mkdir src/components/Contact
+mkdir src/components/ChatBot
+mkdir src/assets 
