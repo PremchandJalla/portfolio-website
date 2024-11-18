@@ -295,6 +295,7 @@
   position: relative;
   width: 300px;
   height: 300px;
+  margin: 0 auto;
 }
 
 .profile-picture {
@@ -316,27 +317,38 @@
     inset 0 0 30px rgba(0, 123, 255, 0.3);
 }
 
-.tech-circle {
+.halo {
   position: absolute;
-  top: -10px;
-  left: -10px;
-  right: -10px;
-  bottom: -10px;
-  border: 2px solid rgba(0, 123, 255, 0.5);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  border: 3px solid rgba(0, 123, 255, 0.5);
   border-radius: 50%;
-  animation: rotate 10s linear infinite;
+  z-index: 1;
+  box-shadow: 0 0 15px rgba(0, 123, 255, 0.5);
 }
 
-.tech-circle::before {
-  content: '';
+.rotating-ball {
   position: absolute;
-  top: -2px;
+  top: 0;
   left: 50%;
   width: 20px;
   height: 20px;
-  background: #007bff;
+  background-color: rgba(0, 123, 255, 0.7);
   border-radius: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
+  animation: rotateBall 5s linear infinite;
+}
+
+@keyframes rotateBall {
+  0% {
+    transform: translate(-50%, -150px) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -150px) rotate(360deg);
+  }
 }
 
 .glitch-effect {
@@ -462,6 +474,40 @@
     margin-left: 0;
     margin-top: 20px;
   }
+
+  .profile-picture-container {
+    width: 200px;
+    height: 200px;
+  }
+
+  .halo {
+    width: 200px;
+    height: 200px;
+  }
+
+  .rotating-ball {
+    width: 15px;
+    height: 15px;
+    animation: rotateBall 5s linear infinite;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-picture-container {
+    width: 150px;
+    height: 150px;
+  }
+
+  .halo {
+    width: 150px;
+    height: 150px;
+  }
+
+  .rotating-ball {
+    width: 10px;
+    height: 10px;
+    animation: rotateBall 5s linear infinite;
+  }
 }
 
 /* Responsive Design */
@@ -569,6 +615,17 @@
     left: 50%;
     transform: translateX(-50%);
   }
+
+  .halo {
+    width: 200px;
+    height: 200px;
+  }
+
+  .rotating-ball {
+    width: 15px;
+    height: 15px;
+    animation: rotateBall 5s linear infinite;
+  }
 }
 
 @media (max-width: 576px) {
@@ -604,6 +661,17 @@
     width: 45px;
     height: 45px;
   }
+
+  .halo {
+    width: 150px;
+    height: 150px;
+  }
+
+  .rotating-ball {
+    width: 10px;
+    height: 10px;
+    animation: rotateBall 5s linear infinite;
+  }
 }
 
 @media (max-width: 380px) {
@@ -622,6 +690,17 @@
   .profile-picture-container {
     width: 180px;
     height: 180px;
+  }
+
+  .halo {
+    width: 150px;
+    height: 150px;
+  }
+
+  .rotating-ball {
+    width: 10px;
+    height: 10px;
+    animation: rotateBall 5s linear infinite;
   }
 }
 
@@ -795,3 +874,5 @@
   opacity: 0.7;
   mix-blend-mode: screen;
 }
+
+
