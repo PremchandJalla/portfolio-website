@@ -126,11 +126,13 @@ const Hero = () => {
           <h1 className="hero-title glitch-effect">Hi, I'm Premchand Jalla</h1>
           <div className="title-scroll">
             <span>AI Developer</span>
-            <span>ML Engineer</span>
-            <span>Robot Builder</span>
+            <span>Application Developer</span>
+            <span>MLOps Engineer</span>
+            <span>Data Engineer</span>
+            <span>Full stack developer</span>
           </div>
           <p className="hero-description">
-            Crafting intelligent solutions at the intersection of AI and robotics
+          I am a software engineer passionate about building AI solutions, with experience in application development and machine learning. I'm building AI solutions to make a positive impact in the world. Let's tune those hyperparameters and optimize for greatness! Turning ideas into reality, one line of code at a time.
           </p>
           <div className="hero-buttons">
             <a href="/resume.pdf" className="resume-button" download>
@@ -142,7 +144,7 @@ const Hero = () => {
                   href="https://github.com/PremchandJalla" 
                   src={githubIcon} 
                   alt="GitHub" 
-                  className="social-icon-img"
+                  className="social-icon-img"th
                 />
                 <LazyImage 
                   href="https://www.linkedin.com/in/premchandjalla/" 
