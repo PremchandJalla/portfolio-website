@@ -20,7 +20,7 @@ const Features = () => {
     {
       id: 1,
       title: "Highlander Bot",
-      description: "Description of project 1 goes here",
+      description: "ChatBot for NJIT",
       technologies: ["LLM", "Python", "Flask"],
       codeLink: "https://github.com/PremchandJalla/HackNJITBOT",
       demoLink: "https://github.com/PremchandJalla/HackNJITBOT",
@@ -29,7 +29,7 @@ const Features = () => {
     {
       id: 2,
       title: "Attention-Based Deep Learning for Dog Cardiomegaly Classification",
-      description: "Description of project 2 goes here",
+      description: "Neural Network built from Scratch for Classifying Dog Cardiomegaly",
       technologies: ["Deep Learning", "PyTorch"],
       codeLink: "https://github.com/PremchandJalla/Dog-Cardiomegaly",
       demoLink: "https://www.researchgate.net/publication/385982443_Attention-Based_Deep_Learning_for_Dog_Cardiomegaly_Classification",
@@ -38,7 +38,7 @@ const Features = () => {
     {
       id: 3,
       title: "Special Recognition Award",
-      description: "Description of project 2 goes here",
+      description: "Special Recognition Award fpr leading Banks Statement Analysis Module",
       technologies: ["LLM", "AWS", "Flask","Dockers"],
       codeLink: "https://drive.google.com/file/d/148x-pWINaTI_lIbDQLPA4BU9VOmxAfNu/view",
       demoLink: "https://drive.google.com/file/d/148x-pWINaTI_lIbDQLPA4BU9VOmxAfNu/view",
@@ -47,7 +47,7 @@ const Features = () => {
     {
       id: 4,
       title: "AI/ML Hackathon Award",
-      description: "Description of project 2 goes here",
+      description: "Designed and deployed MLOps pipelines for underperforming large language models",
       technologies: ["MLOps", "LLM Evaluation", "CI/CD"],
       codeLink: "https://drive.google.com/file/d/1kVQbG7NGvroSniULgfbIY7_1gKwfLFlV/view",
       demoLink: "https://drive.google.com/file/d/1kVQbG7NGvroSniULgfbIY7_1gKwfLFlV/view",
@@ -56,7 +56,7 @@ const Features = () => {
     {
       id: 5,
       title: "Legal Q&A Bot, Cloudera Evolve24 Hackathon winner",
-      description: "Description of project 2 goes here",
+      description: "Built an Accelerated Machine Learning Package for a RAG based Legal Q&A chatbot in 12 hours",
       technologies: ["NVDIA NIM", "LLM", "AMPs"],
       codeLink: "https://github.com/PremchandJalla/LegalDocHack",
       demoLink: "https://github.com/PremchandJalla/LegalDocHack",
@@ -65,7 +65,7 @@ const Features = () => {
     {
       id: 6,
       title: "Star Micronics Dashboard",
-      description: "Description of project 2 goes here",
+      description: "Designed and implemented a robust dashboard for analyzing POS data",
       technologies: ["Python", "Flask", "Dash" , "LLM"],
       codeLink: "https://github.com/PremchandJalla/sma-flask-dashboard",
       demoLink: "https://www.google.com/url?q=https://starmicronics-dashboard.onrender.com&sa=D&source=apps-viewer-frontend&ust=1733001313509321&usg=AOvVaw1cgOfTGq2Z7JB4pXEmy62v&hl=en",
