@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/portfolio-website/static/css/main.c5f45604.css",
-    "main.js": "/portfolio-website/static/js/main.0709c0d0.js",
-    "static/css/688.cfb9c095.chunk.css": "/portfolio-website/static/css/688.cfb9c095.chunk.css",
+    "main.js": "/portfolio-website/static/js/main.7981483b.js",
+    "static/css/688.beeeb22e.chunk.css": "/portfolio-website/static/css/688.beeeb22e.chunk.css",
     "static/js/688.3d45403e.chunk.js": "/portfolio-website/static/js/688.3d45403e.chunk.js",
     "static/css/357.343e93e4.chunk.css": "/portfolio-website/static/css/357.343e93e4.chunk.css",
     "static/js/357.9b227d41.chunk.js": "/portfolio-website/static/js/357.9b227d41.chunk.js",
@@ -29,8 +29,8 @@
     "static/media/AI_ML Hackathon.jpg": "/portfolio-website/static/media/AI_ML Hackathon.c96dfb53cd18eb12c62e.jpg",
     "index.html": "/portfolio-website/index.html",
     "main.c5f45604.css.map": "/portfolio-website/static/css/main.c5f45604.css.map",
-    "main.0709c0d0.js.map": "/portfolio-website/static/js/main.0709c0d0.js.map",
-    "688.cfb9c095.chunk.css.map": "/portfolio-website/static/css/688.cfb9c095.chunk.css.map",
+    "main.7981483b.js.map": "/portfolio-website/static/js/main.7981483b.js.map",
+    "688.beeeb22e.chunk.css.map": "/portfolio-website/static/css/688.beeeb22e.chunk.css.map",
     "688.3d45403e.chunk.js.map": "/portfolio-website/static/js/688.3d45403e.chunk.js.map",
     "357.343e93e4.chunk.css.map": "/portfolio-website/static/css/357.343e93e4.chunk.css.map",
     "357.9b227d41.chunk.js.map": "/portfolio-website/static/js/357.9b227d41.chunk.js.map",
@@ -46,6 +46,6 @@
   },
   "entrypoints": [
     "static/css/main.c5f45604.css",
-    "static/js/main.0709c0d0.js"
+    "static/js/main.7981483b.js"
   ]
 }
