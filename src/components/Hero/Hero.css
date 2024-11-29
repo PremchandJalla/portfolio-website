@@ -1,3 +1,4 @@
+
 .hero-section {
   display: flex;
   align-items: center;
@@ -11,6 +12,45 @@
   color: white;
   overflow: hidden;
   filter: brightness(1.5) contrast(1.1);
+}
+
+/* Mobile screens (max-width: 768px) */
+@media (max-width: 768px) {
+  .hero-section {
+    background-size: contain; /* Adjust image size for smaller screens */
+    background-position: center top; /* Align image for mobile portrait */
+    background-attachment: scroll; /* Disable fixed scrolling effect */
+  }
+}
+
+/* Extra-small screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .hero-section {
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0.7)
+      ),
+      url('../../assets/hero-bg.jpg'); /* Use a smaller image for performance */
+    background-size: cover;
+    background-position: center top;
+  }
+}
+
+/* Landscape mode (orientation: landscape) */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero-section {
+    background-size: cover;
+    background-position: center center;
+    background-attachment: scroll;
+  }
+}
+
+/* Portrait mode for tablets (max-width: 1024px) */
+@media (max-width: 1024px) and (orientation: portrait) {
+  .hero-section {
+    background-position: center center;
+    background-size: contain;
+  }
 }
 
 .hero-content {
