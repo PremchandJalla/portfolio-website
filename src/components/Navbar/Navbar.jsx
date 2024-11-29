@@ -23,7 +23,7 @@ const Navbar = ({ activeSection }) => {
           className={`nav-link ${activeSection === 'features' ? 'active' : ''}`}
           onClick={() => scrollToSection('features')}
         >
-          Projects
+          Featured
         </button>
         <button 
           className={`nav-link ${activeSection === 'skills' ? 'active' : ''}`}
@@ -35,7 +35,7 @@ const Navbar = ({ activeSection }) => {
           className={`nav-link ${activeSection === 'blogs' ? 'active' : ''}`}
           onClick={() => scrollToSection('blogs')}
         >
-          Blog
+          Experience
         </button>
         <button 
           className={`nav-link ${activeSection === 'contact' ? 'active' : ''}`}
