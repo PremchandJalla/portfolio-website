@@ -11,7 +11,7 @@ const Navbar = ({ activeSection }) => {
 
   return (
     <nav className="navbar" id="main-navbar">
-      <div className="navbar-brand">Portfolio</div>
+      <div className="navbar-brand">Premchand Jalla</div>
       <div className="navbar-links">
         <button 
           className={`nav-link ${activeSection === 'hero' ? 'active' : ''}`}
