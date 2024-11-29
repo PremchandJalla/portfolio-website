@@ -9,50 +9,80 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 30px;
-  box-shadow: 
-    0 2px 15px rgba(0, 123, 255, 0.5),
+  box-shadow: 0 2px 15px rgba(0, 123, 255, 0.5),
     0 2px 25px rgba(0, 123, 255, 0.3);
   z-index: 10000 !important;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }
 
-.navbar::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: 
-    radial-gradient(circle at 10% 50%, rgba(0, 123, 255, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 90% 50%, rgba(0, 123, 255, 0.1) 0%, transparent 50%);
-  animation: navbarPattern 10s infinite linear;
-  opacity: 0.5;
-}
-
 .navbar-brand {
   font-size: 1.8rem;
   font-weight: bold;
   color: #fff;
-  text-shadow: 
-    0 0 15px rgba(0, 123, 255, 0.7),
-    0 0 25px rgba(0, 123, 255, 0.5);
-  transition: all 0.3s ease;
-  position: relative;
+  text-shadow: 0 0 15px rgba(0, 123, 255, 0.7), 0 0 25px rgba(0, 123, 255, 0.5);
   letter-spacing: 1px;
+  cursor: pointer;
 }
 
-.navbar-brand:hover {
-  text-shadow: 0 0 25px rgba(0, 123, 255, 0.9);
-  transform: scale(1.05);
-  animation: pulseBrand 2s infinite;
+.menu-toggle {
+  display: none; /* Hidden on larger screens */
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
 .navbar-links {
   display: flex;
   gap: 20px;
 }
+
+.navbar-links.open {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 70px;
+  right: 30px;
+  background: rgba(10, 10, 20, 0.98);
+  padding: 10px 20px;
+  box-shadow: 0 2px 15px rgba(0, 123, 255, 0.5),
+    0 2px 25px rgba(0, 123, 255, 0.3);
+  border-radius: 8px;
+  z-index: 10001;
+}
+
+.nav-link {
+  background: none;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  color: #fff;
+  transition: all 0.4s ease;
+  letter-spacing: 0.5px;
+  margin: 0 5px;
+  border-radius: 4px;
+}
+
+.nav-link.active {
+  color: #007bff;
+  font-weight: bold;
+  text-shadow: 0 0 15px rgba(0, 123, 255, 0.7);
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar-links {
+    display: none; /* Hidden by default on smaller screens */
+  }
+}
+
 
 .nav-link {
   background: none;
