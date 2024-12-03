@@ -135,7 +135,7 @@ const Hero = () => {
           I am a software engineer passionate about building AI solutions, with experience in application development and machine learning. I'm building AI solutions to make a positive impact in the world. Let's tune those hyperparameters and optimize for greatness! Turning ideas into reality, one line of code at a time.
           </p>
           <div className="hero-buttons">
-            <a href="https://drive.google.com/file/d/1c8-B_09Gcmg7DrgyB0vypglViS5lFDA3/view?usp=sharing" className="resume-button" target='blank'>
+            <a href="https://drive.google.com/file/d/1jMpaAJGD0JlFzH_Rh1oAX_uWclYYduOI/view?usp=sharing" className="resume-button" target='blank'>
               Resume
             </a>
             <div className="social-links">
