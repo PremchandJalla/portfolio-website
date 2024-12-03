@@ -127,7 +127,7 @@ const Hero = () => {
           <div className="title-scroll">
             <span>AI Developer</span>
             <span>Application Developer</span>
-            <span>MLOps Engineer</span>
+            <span>AIOps Engineer</span>
             <span>Data Engineer</span>
             <span>Full stack developer</span>
           </div>
