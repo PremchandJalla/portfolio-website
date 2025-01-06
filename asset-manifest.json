@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/portfolio-website/static/css/main.c5f45604.css",
-    "main.js": "/portfolio-website/static/js/main.0d3fa969.js",
+    "main.js": "/portfolio-website/static/js/main.0d069558.js",
     "static/css/688.beeeb22e.chunk.css": "/portfolio-website/static/css/688.beeeb22e.chunk.css",
     "static/js/688.8caf4a8e.chunk.js": "/portfolio-website/static/js/688.8caf4a8e.chunk.js",
-    "static/css/357.343e93e4.chunk.css": "/portfolio-website/static/css/357.343e93e4.chunk.css",
-    "static/js/357.9b227d41.chunk.js": "/portfolio-website/static/js/357.9b227d41.chunk.js",
+    "static/css/383.47e22a9d.chunk.css": "/portfolio-website/static/css/383.47e22a9d.chunk.css",
+    "static/js/383.b0874f1e.chunk.js": "/portfolio-website/static/js/383.b0874f1e.chunk.js",
     "static/css/324.ed952402.chunk.css": "/portfolio-website/static/css/324.ed952402.chunk.css",
     "static/js/324.f2a55aff.chunk.js": "/portfolio-website/static/js/324.f2a55aff.chunk.js",
     "static/css/662.9ea0f62f.chunk.css": "/portfolio-website/static/css/662.9ea0f62f.chunk.css",
@@ -15,8 +15,12 @@
     "static/css/988.be6544cb.chunk.css": "/portfolio-website/static/css/988.be6544cb.chunk.css",
     "static/js/988.9d713f39.chunk.js": "/portfolio-website/static/js/988.9d713f39.chunk.js",
     "static/js/453.1407b060.chunk.js": "/portfolio-website/static/js/453.1407b060.chunk.js",
+    "static/media/ai-agents.jpg": "/portfolio-website/static/media/ai-agents.50428dfe420687bd7dd3.jpg",
+    "static/media/rl.webp": "/portfolio-website/static/media/rl.1349744ddaa15697fc23.webp",
+    "static/media/real-estate.png": "/portfolio-website/static/media/real-estate.ad7d4efb1fe09c84c9d8.png",
     "static/media/hero-bg.jpg": "/portfolio-website/static/media/hero-bg.a92401b33523a659566f.jpg",
     "static/media/LinkedIN.png": "/portfolio-website/static/media/LinkedIN.31c8c766c5740b92c863.png",
+    "static/media/healthcare.webp": "/portfolio-website/static/media/healthcare.a161bc9d1d1dfa023db8.webp",
     "static/media/Github.png": "/portfolio-website/static/media/Github.3cb4c4d227b62c0ce00b.png",
     "static/media/mandelbroth.png": "/portfolio-website/static/media/mandelbroth.2d5fbd104fcf842a1529.png",
     "static/media/ClouderaE.png": "/portfolio-website/static/media/ClouderaE.a55598892b2a8ef54feb.png",
@@ -25,15 +29,16 @@
     "static/media/HighlanderBot.jpg": "/portfolio-website/static/media/HighlanderBot.2975bf887f9879763894.jpg",
     "static/media/Star.png": "/portfolio-website/static/media/Star.7c49b7094b12b03ac37c.png",
     "static/media/option2.jpeg": "/portfolio-website/static/media/option2.0ac8bd04e4973a4572c7.jpeg",
+    "static/media/chatbots.jpg": "/portfolio-website/static/media/chatbots.7ba940d3b17d3eb27c31.jpg",
     "static/media/specialRecog.jpg": "/portfolio-website/static/media/specialRecog.5be568fd366bcc6de662.jpg",
-    "static/media/AI_ML Hackathon.jpg": "/portfolio-website/static/media/AI_ML Hackathon.c96dfb53cd18eb12c62e.jpg",
+    "static/media/aiml.jpg": "/portfolio-website/static/media/aiml.c96dfb53cd18eb12c62e.jpg",
     "index.html": "/portfolio-website/index.html",
     "main.c5f45604.css.map": "/portfolio-website/static/css/main.c5f45604.css.map",
-    "main.0d3fa969.js.map": "/portfolio-website/static/js/main.0d3fa969.js.map",
+    "main.0d069558.js.map": "/portfolio-website/static/js/main.0d069558.js.map",
     "688.beeeb22e.chunk.css.map": "/portfolio-website/static/css/688.beeeb22e.chunk.css.map",
     "688.8caf4a8e.chunk.js.map": "/portfolio-website/static/js/688.8caf4a8e.chunk.js.map",
-    "357.343e93e4.chunk.css.map": "/portfolio-website/static/css/357.343e93e4.chunk.css.map",
-    "357.9b227d41.chunk.js.map": "/portfolio-website/static/js/357.9b227d41.chunk.js.map",
+    "383.47e22a9d.chunk.css.map": "/portfolio-website/static/css/383.47e22a9d.chunk.css.map",
+    "383.b0874f1e.chunk.js.map": "/portfolio-website/static/js/383.b0874f1e.chunk.js.map",
     "324.ed952402.chunk.css.map": "/portfolio-website/static/css/324.ed952402.chunk.css.map",
     "324.f2a55aff.chunk.js.map": "/portfolio-website/static/js/324.f2a55aff.chunk.js.map",
     "662.9ea0f62f.chunk.css.map": "/portfolio-website/static/css/662.9ea0f62f.chunk.css.map",
@@ -46,6 +51,6 @@
   },
   "entrypoints": [
     "static/css/main.c5f45604.css",
-    "static/js/main.0d3fa969.js"
+    "static/js/main.0d069558.js"
   ]
 }
