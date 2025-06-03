@@ -132,7 +132,7 @@ const Hero = () => {
             <span>Full stack developer</span>
           </div>
           <p className="hero-description">
-          I am a software engineer passionate about building AI solutions, with experience in application development and machine learning. I'm building AI solutions to make a positive impact in the world. Let's tune those hyperparameters and optimize for greatness! Turning ideas into reality, one line of code at a time TEST PUSH.
+          I am a software engineer passionate about building AI solutions, with experience in application development and machine learning. I'm building AI solutions to make a positive impact in the world. Let's tune those hyperparameters and optimize for greatness! Turning ideas into reality, one line of code at a time.
           </p>
           <div className="hero-buttons">
             <a href="https://drive.google.com/file/d/1jMpaAJGD0JlFzH_Rh1oAX_uWclYYduOI/view?usp=sharing" className="resume-button" target='blank'>

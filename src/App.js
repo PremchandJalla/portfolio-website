@@ -4,6 +4,7 @@ import Navbar from './components/Navbar/Navbar';
 
 // Lazy loaded components
 const Hero = lazy(() => import('./components/Hero/Hero'));
+const Experience = lazy(() => import('./components/Experience/Experience'));
 const Features = lazy(() => import('./components/Features/Features'));
 const Skills = lazy(() => import('./components/Skills/Skills'));
 const Blogs = lazy(() => import('./components/Blogs/Blogs'));
@@ -40,6 +41,7 @@ function App() {
         <Suspense fallback={<div>Loading...</div>}>
           <main className="main-content">
             <Hero />
+            <Experience />
             <Features />
             <Skills />
             <Blogs />
