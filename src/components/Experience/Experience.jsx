@@ -194,7 +194,7 @@ const Experience = () => {
         />
         {/* Mobile Overlay for Readability */}
         <div className="exp-bg-mobile-overlay" />
-        {/* Particles Overlay */}
+        {/* Particles Overlay: Only render in Experience section */}
         <Particles />
         {/* Content */}
         <header className="experience-header" ref={headerRef} role="banner">

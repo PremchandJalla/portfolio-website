@@ -127,6 +127,7 @@ const Particles = () => {
   return (
     <canvas
       ref={canvasRef}
+      className="particles-canvas"
       style={{
         position: 'fixed',
         top: 0,

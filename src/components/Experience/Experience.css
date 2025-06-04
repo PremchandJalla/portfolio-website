@@ -27,7 +27,7 @@
 @media (max-width: 768px) {
   .exp-bg-mobile-overlay {
     display: block;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100vw;
@@ -35,6 +35,10 @@
     background: rgba(0,0,0,0.7);
     z-index: 1;
     pointer-events: none;
+  }
+
+  .particles-canvas {
+    opacity: 0.12;
   }
 }
 

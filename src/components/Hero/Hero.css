@@ -1,4 +1,3 @@
-
 .hero-section {
   display: flex;
   align-items: center;
@@ -27,8 +26,8 @@
 @media (max-width: 480px) {
   .hero-section {
     background-image: linear-gradient(
-        rgba(0, 0, 0, 0.7),
-        rgba(0, 0, 0, 0.7)
+        rgba(0, 0, 0, 0.3),
+        rgba(0, 0, 0, 0.3)
       ),
       url('../../assets/hero-bg.jpg'); /* Use a smaller image for performance */
     background-size: cover;
