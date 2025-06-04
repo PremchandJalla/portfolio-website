@@ -1,6 +1,7 @@
 import React, { Suspense, lazy, useState, useEffect } from 'react';
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
+import AccessibilityPanel from './components/AccessibilityPanel';
 
 // Lazy loaded components
 const Hero = lazy(() => import('./components/Hero/Hero'));
@@ -35,7 +36,7 @@ function App() {
   }, []);
 
   return (
-    <>
+    <AccessibilityPanel>
       <Navbar activeSection={activeSection} />
       <div className="App">
         <Suspense fallback={<div>Loading...</div>}>
@@ -50,7 +51,7 @@ function App() {
           <ChatBot />
         </Suspense>
       </div>
-    </>
+    </AccessibilityPanel>
   );
 }
 

@@ -1,0 +1,191 @@
+/* Floating Accessibility Button */
+.acp-fab {
+  position: fixed;
+  bottom: 2.2rem;
+  left: 2.2rem;
+  z-index: 10000;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(10, 20, 40, 0.95);
+  box-shadow: 0 0 24px 6px #00f3ff, 0 2px 8px rgba(0,0,0,0.4);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: box-shadow 0.2s, background 0.2s;
+  outline: none;
+}
+.acp-fab:focus, .acp-fab:active {
+  box-shadow: 0 0 0 4px #fff, 0 0 24px 6px #00f3ff;
+  background: #001a2e;
+}
+.acp-icon {
+  font-size: 2.2rem;
+  color: #00f3ff;
+  text-shadow: 0 0 16px #00f3ff, 0 0 4px #fff;
+}
+
+/* Modal Overlay */
+.acp-modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.7);
+  z-index: 10001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: acp-fade-in 0.25s cubic-bezier(0.4,0,0.2,1);
+}
+@keyframes acp-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Modal Panel */
+.acp-modal {
+  background: rgba(10, 20, 40, 0.98);
+  border-radius: 24px;
+  box-shadow: 0 0 32px 8px #00f3ff, 0 2px 16px rgba(0,0,0,0.5);
+  padding: 2.2rem 2rem 1.5rem 2rem;
+  min-width: 320px;
+  max-width: 95vw;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  position: relative;
+  animation: acp-modal-in 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+@keyframes acp-modal-in {
+  from { transform: translateY(40px) scale(0.95); opacity: 0; }
+  to { transform: none; opacity: 1; }
+}
+
+.acp-modal-title {
+  font-size: 1.5rem;
+  margin-bottom: 1.2rem;
+  text-align: center;
+  color: #00f3ff;
+  text-shadow: 0 0 12px #00f3ff;
+}
+
+.acp-modal-options {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  margin-bottom: 1.2rem;
+}
+
+.acp-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  user-select: none;
+}
+.acp-toggle input[type="checkbox"] {
+  width: 24px;
+  height: 24px;
+  accent-color: #00f3ff;
+  border-radius: 6px;
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+
+.acp-modal-info {
+  margin-bottom: 1.2rem;
+  color: #b0eaff;
+  font-size: 1rem;
+}
+.acp-guide {
+  background: rgba(0,243,255,0.08);
+  border-radius: 10px;
+  padding: 0.7rem 1rem;
+  margin-bottom: 0.5rem;
+  color: #b0eaff;
+}
+
+.acp-reset, .acp-close {
+  margin-top: 0.7rem;
+  padding: 0.7rem 1.2rem;
+  border-radius: 10px;
+  border: none;
+  background: #00f3ff;
+  color: #001a2e;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 0 8px #00f3ff;
+  transition: background 0.2s, color 0.2s;
+  margin-right: 0.7rem;
+}
+.acp-reset:hover, .acp-close:hover, .acp-reset:focus, .acp-close:focus {
+  background: #001a2e;
+  color: #00f3ff;
+  outline: 2px solid #00f3ff;
+}
+
+/* High Contrast Mode */
+.acp-high-contrast, .acp-high-contrast body, .acp-high-contrast .experience-section, .acp-high-contrast .experience-panel, .acp-high-contrast .company-header, .acp-high-contrast .role-container {
+  background: #000 !important;
+  color: #fff !important;
+  border-color: #fff !important;
+}
+.acp-high-contrast .period, .acp-high-contrast .acp-modal, .acp-high-contrast .acp-guide {
+  background: #fff !important;
+  color: #000 !important;
+}
+.acp-high-contrast .acp-modal-title {
+  color: #fff !important;
+  text-shadow: none !important;
+}
+
+/* Reduce Motion */
+@media (prefers-reduced-motion: reduce), .acp-reduce-motion * {
+  transition: none !important;
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  scroll-behavior: auto !important;
+}
+
+/* Focus Guide */
+.acp-high-contrast :focus, .acp-fab:focus, .acp-modal :focus {
+  outline: 3px solid #00f3ff !important;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px #fff, 0 0 24px 6px #00f3ff;
+}
+
+/* Skip Link */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 8px;
+  background: #00f3ff;
+  color: #001a2e;
+  padding: 0.7rem 1.2rem;
+  border-radius: 8px;
+  z-index: 10001;
+  font-weight: bold;
+  transition: left 0.2s;
+}
+.skip-link:focus {
+  left: 16px;
+  outline: 3px solid #fff;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .acp-fab {
+    width: 52px;
+    height: 52px;
+    bottom: 1.2rem;
+    left: 1.2rem;
+  }
+  .acp-modal {
+    min-width: 90vw;
+    padding: 1.2rem 0.7rem 1.2rem 0.7rem;
+  }
+} 

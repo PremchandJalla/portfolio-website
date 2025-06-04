@@ -125,7 +125,7 @@ const Hero = () => {
         <div className="hero-text">
           <h1 className="hero-title glitch-effect">Hi, I'm Premchand Jalla</h1>
           <div className="title-scroll">
-            <span>AI Developer</span>
+            <span>Machine Learning Engineer</span>
             <span>Application Developer</span>
             <span>AIOps Engineer</span>
             <span>Data Engineer</span>

@@ -30,6 +30,23 @@ const Experience = () => {
   }, []);
 
   useEffect(() => {
+    // Respect prefers-reduced-motion
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) {
+      panelsRef.current.forEach(panel => {
+        if (panel) {
+          panel.style.opacity = 1;
+          panel.style.transform = 'none';
+        }
+      });
+      rolesRef.current.forEach(role => {
+        if (role) {
+          role.style.opacity = 1;
+          role.style.transform = 'none';
+        }
+      });
+      return;
+    }
     // Pin the header
     ScrollTrigger.create({
       trigger: sectionRef.current,
@@ -157,54 +174,68 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="experience-section" ref={sectionRef}>
-      {/* Background Image Layer */}
-      <img
-        id="exp-bg-img"
-        src={ExpBackground}
-        alt="Experience Background"
-        className="exp-bg-img"
-        draggable="false"
-      />
-      {/* Mobile Overlay for Readability */}
-      <div className="exp-bg-mobile-overlay" />
-      {/* Particles Overlay */}
-      <Particles />
-      {/* Content */}
-      <div className="experience-header" ref={headerRef}>
-        <h2>The Training Logs of My Career</h2>
-      </div>
-      <div className="experience-panels">
-        {experiences.map((exp, index) => (
-          <div
-            key={index}
-            className="experience-panel"
-            ref={el => (panelsRef.current[index] = el)}
-          >
-            <div className="company-header">
-              <h3>{exp.company}</h3>
-              <span className="period">{exp.period}</span>
-            </div>
-            {exp.roles.map((role, roleIndex) => (
-              <div
-                key={roleIndex}
-                className="role-container"
-                ref={el => {
-                  if (el) rolesRef.current.push(el);
-                }}
-              >
-                <h4>{role.title}</h4>
-                <ul>
-                  {role.achievements.map((achievement, achievementIndex) => (
-                    <li key={achievementIndex}>{achievement}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        ))}
-      </div>
-    </section>
+    <>
+      {/* Skip link for accessibility */}
+      <a href="#main-content" className="skip-link">Skip to Content</a>
+      <section
+        id="experience"
+        className="experience-section"
+        ref={sectionRef}
+        aria-labelledby="experience-title"
+        role="region"
+      >
+        {/* Background Image Layer */}
+        <img
+          id="exp-bg-img"
+          src={ExpBackground}
+          alt="Abstract neural network background art representing AI connectivity and digital flow."
+          className="exp-bg-img"
+          draggable="false"
+        />
+        {/* Mobile Overlay for Readability */}
+        <div className="exp-bg-mobile-overlay" />
+        {/* Particles Overlay */}
+        <Particles />
+        {/* Content */}
+        <header className="experience-header" ref={headerRef} role="banner">
+          <h2 id="experience-title">The Training Logs of My Career</h2>
+        </header>
+        <main id="main-content" className="experience-panels" aria-live="polite">
+          {experiences.map((exp, index) => (
+            <article
+              key={index}
+              className="experience-panel"
+              ref={el => (panelsRef.current[index] = el)}
+              tabIndex={0}
+              aria-labelledby={`company-title-${index}`}
+            >
+              <header className="company-header">
+                <h3 id={`company-title-${index}`}>{exp.company}</h3>
+                <span className="period">{exp.period}</span>
+              </header>
+              {exp.roles.map((role, roleIndex) => (
+                <section
+                  key={roleIndex}
+                  className="role-container"
+                  ref={el => {
+                    if (el) rolesRef.current.push(el);
+                  }}
+                  tabIndex={0}
+                  aria-labelledby={`role-title-${index}-${roleIndex}`}
+                >
+                  <h4 id={`role-title-${index}-${roleIndex}`}>{role.title}</h4>
+                  <ul>
+                    {role.achievements.map((achievement, achievementIndex) => (
+                      <li key={achievementIndex}>{achievement}</li>
+                    ))}
+                  </ul>
+                </section>
+              ))}
+            </article>
+          ))}
+        </main>
+      </section>
+    </>
   );
 };
 
